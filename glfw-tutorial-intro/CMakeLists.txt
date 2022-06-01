@@ -12,3 +12,4 @@ endif()
 
 # TODO: Add tests and install targets if needed.
 target_link_libraries("glfw-tutorial-intro-cmake" glfw)
+target_include_directories("glfw-tutorial-intro-cmake" SYSTEM PUBLIC "../glfw/deps")
