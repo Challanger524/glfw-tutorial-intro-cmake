@@ -4,7 +4,10 @@
 cmake_minimum_required (VERSION 3.8)
 
 # Add source to this project's executable.
-add_executable (glfw-tutorial-intro-cmake "main.cpp")
+add_executable (glfw-tutorial-intro-cmake WIN32 "main.cpp")
+
+#target_compile_options(glfw-tutorial-intro-cmake PRIVATE -mwindows)
+#set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -mwindows")
 
 if (CMAKE_VERSION VERSION_GREATER 3.12)
   set_property(TARGET glfw-tutorial-intro-cmake PROPERTY CXX_STANDARD 20)
